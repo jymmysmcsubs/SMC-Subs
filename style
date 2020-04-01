@@ -1,5 +1,17 @@
-General grammar and style
-*
+General grammar and style:
+* Australian English
+* spaced en-dashes (not em-dashes, excepting special uses such as quote attributions)
+* singulars ending in s given possessive with 's, unless that singular noun is a plural word, e.g. Chris's guitar, but the Beatles' first album
+* no Oxford/serial comma – instead, follow good style rules and use as few commas as necessary to clearly convey information
+* do not write "should/could/would of", unless conveying a character of poor education or with very colloquial speech
+* do not write "[adjective] of a/an [noun]", e.g. "that big of a deal", unless conveying a character of poor education or with very colloquial speech
+* quotation marks should only contain the punctuation which belongs to the quote (see examples in previous notes)
+* write numbers as full words unless it seems more practical not to
+* checkout, backup, setup, etc.: nouns
+* check out, back up, set up, etc.: verbs
 
 Fansubbing
-*
+* trailing ellipsis not necessary for a line which will be completed later, unless there is a significant pause
+* no leading ellipsis unless the start of the sentence was never actually spoken, in which case it should be spaced and begin without a capital letter
+* three-liners bad
+* manual line-breaks preferred even if it breaks where you want it to in case of renderer differences – the \q2 tag should also be used with any linebreak to prevent accidental three-liners due to renderer discrepancies
