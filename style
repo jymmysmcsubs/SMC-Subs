@@ -7,22 +7,27 @@ General grammar and style:
 * do not write "[adjective] of a/an [noun]", e.g. "that big of a deal", unless conveying a character of poor education or with very colloquial speech
 * quotation marks should only contain the punctuation which belongs to the quote (see examples in previous notes)
 * write numbers as full words unless it seems more practical not to (e.g. something like "They fired 1337 missiles at us!")
+* no comma splices unless very short and usually matching phrases like "I came, I saw, I conquered" – dashes almost always suffice
 * checkout, backup, setup, etc.: nouns
 * check out, back up, set up, etc.: verbs
 
 Fansubbing - script
-* trailing ellipsis not necessary for a line which will be completed later, unless there is a significant pause and/or the sentence trails off
+* trailing ellipsis not necessary for a line which will be completed later, unless there is a significant pause/interruption and/or the sentence trails off
 * no leading ellipsis unless the start of the sentence was never actually spoken, in which case it should be spaced and begin without a capital letter
 * three-liners bad (obviously()
 * manual line-breaks preferred even if it already breaks where you want it to in case of renderer differences – the \q2 tag should also be used with any linebreak to prevent accidental three-liners due to renderer differences
+* stutters/stammers: use a hyphen, repeat the first sound (not necessarily just the first letter) and duplicate capitalisation, e.g. "Wh-What?"
+* if more than one repetition, no need to match exactly – two can usually suffice, e.g. だ だ だ 大丈夫！ can be "W-W-We'll be fine!"
+* for I and a, space it out and use en-dashes (I hate "stuttering" whole words)
+* this has never come up, but do not follow standard procedure for the word X-ray, as "X-X-ray?" would look stupid as heck (this can also be understood to apply to other words which would look terrible)
 
-Fansubbing - timing (note: rules are made to be broken when necessary, especially with stuff like high CPS short or overlapping lines near a shot change, but these are the starting point and usually applicable)
+Fansubbing - timing (note: rules are made to be broken when necessary, especially with stuff like high CPS short or overlapping lines near a shot change, but these are a starting point and usually applicable)
 * leadin: 120ms
 * leadout: 350ms
 * join end to start of next line or subsequent shot change: 425ms
 * join start to preceding shot change: 150ms
 * if the start of a line is around 280–360ms after a shot change, shorten leadin to 80ms or even 40ms: leadin that long is distracting, but short gaps are almost as bad
-* no alpha timing
+* alpha timing is (usually) very bad
 
 Fansubbing - song timing (note: this is inherently more creative and flexible, but this is a starting point and usually applicable to simple styling)
 * leadin: 260ms (allowing for 125ms of fade)
