@@ -1,0 +1,25 @@
+#!/bin/bash
+projectdir=""
+keyframe_script=""
+tag=""
+animetitle=""
+info=""
+x264args=""
+
+fn() { declare local s="${1%%.*}"; echo "${s##*[!0-9]}"; }
+epno=$(fn "$1")
+epno_short=$(echo "$epno" | sed 's/^0*//')
+eptitle=$(grep -m 1 Episode_Title $1 | sed -e "s/^#Episode_Title://")
+sourcefile=$(grep -m 1 src $1 | awk -F '"' '{print $2}')
+mkdir "$projectdir"/"$epno" 2>/dev/null
+mkdir "$projectdir"/"$epno"/stuff 2>/dev/null
+vspipe $1 - --y4m 2>/dev/null | x264 --quiet --demuxer y4m $x264args -o "$projectdir"/"$epno"/"$epno".mkv -
+duration=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 -sexagesimal "$projectdir"/"$epno"/"$epno".mkv)
+ffmpeg -y -loglevel fatal -i "$sourcefile" -acodec pcm_s16le -t "$duration" -f wav - | opusenc - --quiet --bitrate 196 "$projectdir"/"$epno"/"$epno".opus 2>/dev/null
+mkvmerge -q --title "$animetitle"\ "$epno_short":\ "$eptitle" --language 0:jpn "$projectdir"/"$epno"/"$epno".mkv "$projectdir"/"$epno"/"$epno".opus -o "$projectdir"/"$epno"/\["$tag"\]\ "$animetitle"\ -\ "$epno"\ \("$info"\)\ \[\].mkv
+crc=$(cksfv "$projectdir"/"$epno"/\["$tag"\]\ "$animetitle"\ -\ "$epno"\ \("$info"\)\ \[\].mkv | tail -n +5 | awk '{print $NF}')
+new=$(echo "$projectdir"/"$epno"/\["$tag"\]\ "$animetitle"\ -\ "$epno"\ \("$info"\)\ \[\].mkv | sed "s/\[\]/\[$crc\]/g" -)
+mv "$projectdir"/"$epno"/\["$tag"\]\ "$animetitle"\ -\ "$epno"\ \("$info"\)\ \[\].mkv "$new"
+python "$keyframe_script" "$new" &>/dev/null
+mv "$projectdir"/"$epno"/keyframes.txt "$projectdir"/"$epno"/stuff/keyframes.txt
+rm "$projectdir"/"$epno"/"$epno".mkv "$projectdir"/"$epno"/"$epno".opus "$new".ffindex
