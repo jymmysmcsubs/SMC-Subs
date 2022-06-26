@@ -1,6 +1,6 @@
 General grammar and style:
 * Australian English
-* spaced en-dashes (not em-dashes, excepting special uses such as quote attributions)
+* spaced en dashes for general uses, em dashes for cut-off dialogue and special uses such as quote attributions
 * singulars ending in s given possessive with 's, unless that singular noun is a plural word, e.g. Chris's guitar, but the Beatles' first album
 * no Oxford/serial comma – instead, follow good style rules and use as few commas as necessary to clearly convey information
 * do not write "should/could/would of", unless conveying a character of poor education or with very colloquial speech
@@ -15,11 +15,11 @@ General grammar and style:
 Fansubbing - script
 * trailing ellipsis not necessary for a line which will be completed later, unless there is a significant pause/interruption and/or the sentence trails off
 * no leading ellipsis unless the start of the sentence was never actually spoken, in which case it should be spaced and begin without a capital letter
-* three-liners bad (obviously()
+* three-liners bad (obviously)
 * manual line-breaks preferred even if it already breaks where you want it to in case of renderer differences – the \q2 tag should also be used with any linebreak to prevent accidental three-liners due to renderer differences
 * stutters/stammers: use a hyphen, repeat the first sound (not necessarily just the first letter) and duplicate capitalisation, e.g. "Wh-What?"
 * if more than one repetition, no need to match exactly – two can usually suffice, e.g. だ だ だ 大丈夫！ can be "W-W-We'll be fine!"
-* for I and a, space it out and use en-dashes (I hate "stuttering" whole words)
+* for I and a, space it out and use en dashes (I hate "stuttering" whole words)
 * this has never come up, but do not follow standard procedure for the word X-ray, as "X-X-ray?" would look stupid as heck (this can also be understood to apply to other words which would look terrible)
 
 Fansubbing - timing (note: rules are made to be broken when necessary, especially with stuff like high CPS short or overlapping lines near a shot change, but these are a starting point and usually applicable)
